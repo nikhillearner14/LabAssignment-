@@ -1,0 +1,784 @@
+
+
+1. BASIC JAVASCRIPT SYNTAX
+
+
+console.log("Hello, World!");
+
+document.write("Hello, World!");
+
+alert("Welcome to JavaScript!");
+
+
+
+2. JAVASCRIPT WITH A BUTTON CLICK
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Click Example</title>
+</head>
+<body>
+    <button onclick="showMessage()">Click Me</button>
+
+    <script>
+        function showMessage() {
+            alert("Button clicked!");
+        }
+    </script>
+</body>
+</html>
+
+
+
+3. INLINE JAVASCRIPT
+
+
+<!DOCTYPE html>
+<html>
+<body>
+    <button onclick="alert('Hello from JavaScript!')">Click Me</button>
+</body>
+</html>
+
+
+
+4. INTERNAL JAVASCRIPT
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internal JavaScript</title>
+</head>
+<body>
+    <h2 id="message">Original Text</h2>
+
+    <script>
+        document.getElementById("message").innerHTML = "Text changed using JavaScript";
+    </script>
+</body>
+</html>
+
+
+
+5. EXTERNAL JAVASCRIPT
+
+
+HTML file (index.html):
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>External JavaScript</title>
+</head>
+<body>
+    <h2 id="heading">Hello</h2>
+    <script src="script.js"></script>
+</body>
+</html>
+
+JavaScript file (script.js):
+
+document.getElementById("heading").innerHTML = "JavaScript loaded from an external file";
+
+
+
+6. VARIABLES USING var, let AND const
+
+
+var name = "Archit";
+let age = 19;
+const country = "India";
+
+console.log(name);
+console.log(age);
+console.log(country);
+
+
+
+7. VARIABLE SCOPE EXAMPLE
+
+
+var globalVar = "I am accessible in the function";
+
+function showScope() {
+    let localVar = "I am inside the function";
+    console.log(globalVar);
+    console.log(localVar);
+}
+
+showScope();
+
+
+
+8. VALID VARIABLE NAMES
+
+
+let studentName = "Aman";
+let _marks = 85;
+let total2 = 100;
+
+console.log(studentName, _marks, total2);
+
+
+
+9. JAVASCRIPT DATA TYPES
+
+let studentName = "Riya";       // String
+let age = 20;                   // Number
+let isPresent = true;            // Boolean
+let marks;                       // Undefined
+let emptyValue = null;           // Null
+let student = { name: "Riya", age: 20 }; // Object
+let numbers = [10, 20, 30];      // Array
+
+console.log(typeof studentName);
+console.log(typeof age);
+console.log(typeof isPresent);
+console.log(typeof marks);
+console.log(typeof student);
+console.log(numbers);
+
+
+
+10. JAVASCRIPT OBJECT
+
+
+let student = {
+    name: "Aman",
+    age: 20,
+    course: "BCA"
+};
+
+console.log(student.name);
+console.log(student.age);
+console.log(student.course);
+
+
+
+11. JAVASCRIPT ARRAY
+
+
+let fruits = ["Apple", "Banana", "Mango"];
+
+console.log(fruits[0]);
+console.log(fruits[1]);
+console.log(fruits[2]);
+
+
+
+12. ARITHMETIC OPERATORS
+
+
+let a = 10;
+let b = 3;
+
+console.log(a + b);
+console.log(a - b);
+console.log(a * b);
+console.log(a / b);
+console.log(a % b);
+console.log(a ** b);
+
+
+
+13. ASSIGNMENT OPERATORS
+
+
+let x = 10;
+
+x += 5;
+console.log(x);
+
+x -= 2;
+console.log(x);
+
+x *= 3;
+console.log(x);
+
+x /= 2;
+console.log(x);
+
+
+
+14. COMPARISON OPERATORS
+
+
+let a = 10;
+let b = 5;
+
+console.log(a == b);
+console.log(a === b);
+console.log(a != b);
+console.log(a > b);
+console.log(a < b);
+console.log(a >= b);
+console.log(a <= b);
+
+
+
+15. LOGICAL OPERATORS
+
+
+let age = 20;
+let hasID = true;
+
+console.log(age >= 18 && hasID);
+console.log(age >= 18 || hasID);
+console.log(!hasID);
+
+
+
+16. IF STATEMENT
+
+
+let age = 18;
+
+if (age >= 18) {
+    console.log("You are eligible to vote.");
+}
+
+
+
+17. IF-ELSE STATEMENT
+
+
+let number = 7;
+
+if (number % 2 === 0) {
+    console.log("Even number");
+} else {
+    console.log("Odd number");
+}
+
+
+
+18. ELSE-IF LADDER
+
+
+let marks = 78;
+
+if (marks >= 90) {
+    console.log("Grade A+");
+} else if (marks >= 80) {
+    console.log("Grade A");
+} else if (marks >= 70) {
+    console.log("Grade B");
+} else if (marks >= 60) {
+    console.log("Grade C");
+} else {
+    console.log("Fail");
+}
+
+
+
+19. SWITCH STATEMENT
+
+
+let day = 3;
+
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    default:
+        console.log("Invalid day");
+}
+
+
+
+20. FOR LOOP
+
+
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+
+
+
+21. WHILE LOOP
+
+
+let i = 1;
+
+while (i <= 5) {
+    console.log(i);
+    i++;
+}
+
+
+
+22. DO-WHILE LOOP
+
+
+let i = 1;
+
+do {
+    console.log(i);
+    i++;
+} while (i <= 5);
+
+
+
+23. BREAK STATEMENT
+
+
+for (let i = 1; i <= 10; i++) {
+    if (i === 5) {
+        break;
+    }
+    console.log(i);
+}
+
+
+
+24. CONTINUE STATEMENT
+
+
+for (let i = 1; i <= 5; i++) {
+    if (i === 3) {
+        continue;
+    }
+    console.log(i);
+}
+
+
+
+25. FUNCTION DECLARATION
+
+
+function greet() {
+    console.log("Hello, welcome!");
+}
+
+greet();
+
+
+26. FUNCTION WITH PARAMETERS
+
+
+function greetUser(name) {
+    console.log("Hello, " + name + "!");
+}
+
+greetUser("Archit");
+
+
+
+27. FUNCTION WITH A RETURN VALUE
+
+
+function add(a, b) {
+    return a + b;
+}
+
+let result = add(10, 20);
+console.log(result);
+
+
+
+28. ANONYMOUS FUNCTION
+
+
+let greet = function () {
+    console.log("Hello from an anonymous function!");
+};
+
+greet();
+
+
+
+29. ARROW FUNCTION
+
+
+const add = (a, b) => {
+    return a + b;
+};
+
+console.log(add(5, 3));
+
+
+
+30. SHORT ARROW FUNCTION
+
+
+const square = number => number * number;
+
+console.log(square(4));
+
+
+
+31. ARRAY LENGTH AND ACCESS
+
+
+let numbers = [10, 20, 30, 40];
+
+console.log(numbers.length);
+console.log(numbers[0]);
+console.log(numbers[numbers.length - 1]);
+
+
+
+32. ADDING AND REMOVING ARRAY ELEMENTS
+
+
+let fruits = ["Apple", "Banana"];
+
+fruits.push("Mango");
+console.log(fruits);
+
+fruits.pop();
+console.log(fruits);
+
+fruits.unshift("Orange");
+console.log(fruits);
+
+fruits.shift();
+console.log(fruits);
+
+
+
+33. ARRAY forEach() METHOD
+
+
+let numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(function (number) {
+    console.log(number);
+});
+
+
+
+34. ARRAY map() METHOD
+
+
+let numbers = [1, 2, 3, 4];
+
+let squares = numbers.map(function (number) {
+    return number * number;
+});
+
+console.log(squares);
+
+
+
+35. ARRAY filter() METHOD
+
+
+let numbers = [10, 15, 20, 25, 30];
+
+let greaterThan20 = numbers.filter(function (number) {
+    return number > 20;
+});
+
+console.log(greaterThan20);
+
+
+
+36. ARRAY find() METHOD
+
+
+let numbers = [5, 12, 18, 25];
+
+let result = numbers.find(function (number) {
+    return number > 15;
+});
+
+console.log(result);
+
+
+
+37. ARRAY includes() METHOD
+
+
+let fruits = ["Apple", "Banana", "Mango"];
+
+console.log(fruits.includes("Banana"));
+console.log(fruits.includes("Grapes"));
+
+
+
+38. ARRAY sort() METHOD
+
+
+let fruits = ["Mango", "Apple", "Banana"];
+
+fruits.sort();
+
+console.log(fruits);
+
+
+
+39. OBJECT PROPERTIES AND METHODS
+
+
+let person = {
+    name: "Rohan",
+    age: 21,
+    greet: function () {
+        console.log("Hello, my name is " + this.name);
+    }
+};
+
+console.log(person.name);
+console.log(person.age);
+person.greet();
+
+
+
+40. ADDING AND UPDATING OBJECT PROPERTIES
+
+
+let student = {
+    name: "Riya",
+    course: "BCA"
+};
+
+student.age = 20;
+student.course = "BCA (AI)";
+
+console.log(student);
+
+
+
+41. JAVASCRIPT EVENT: onclick
+
+
+<!DOCTYPE html>
+<html>
+<body>
+    <button onclick="changeText()">Click Here</button>
+    <p id="demo">Original text</p>
+
+    <script>
+        function changeText() {
+            document.getElementById("demo").innerHTML = "Text changed!";
+        }
+    </script>
+</body>
+</html>
+
+
+
+42. JAVASCRIPT EVENT: onmouseover AND onmouseout
+
+
+<!DOCTYPE html>
+<html>
+<body>
+    <p onmouseover="makeRed(this)" onmouseout="makeBlack(this)">
+        Move your mouse over this text.
+    </p>
+
+    <script>
+        function makeRed(element) {
+            element.style.color = "red";
+        }
+
+        function makeBlack(element) {
+            element.style.color = "black";
+        }
+    </script>
+</body>
+</html>
+
+
+43. JAVASCRIPT EVENT: onkeyup
+
+
+<!DOCTYPE html>
+<html>
+<body>
+    <input type="text" onkeyup="showInput(this.value)" placeholder="Type something">
+    <p id="output"></p>
+
+    <script>
+        function showInput(value) {
+            document.getElementById("output").innerHTML = value;
+        }
+    </script>
+</body>
+</html>
+
+
+
+44. CHANGING HTML CONTENT USING DOM
+
+
+<!DOCTYPE html>
+<html>
+<body>
+    <h2 id="heading">Welcome</h2>
+    <button onclick="changeHeading()">Change Heading</button>
+
+    <script>
+        function changeHeading() {
+            document.getElementById("heading").innerHTML = "Welcome to JavaScript";
+        }
+    </script>
+</body>
+</html>
+
+
+
+45. CHANGING CSS USING JAVASCRIPT
+
+
+<!DOCTYPE html>
+<html>
+<body>
+    <p id="text">This is a sample paragraph.</p>
+    <button onclick="changeStyle()">Change Style</button>
+
+    <script>
+        function changeStyle() {
+            const paragraph = document.getElementById("text");
+            paragraph.style.color = "blue";
+            paragraph.style.fontSize = "24px";
+            paragraph.style.backgroundColor = "lightyellow";
+        }
+    </script>
+</body>
+</html>
+
+
+
+46. GETTING INPUT FROM A TEXT BOX
+
+
+<!DOCTYPE html>
+<html>
+<body>
+    <input type="text" id="username" placeholder="Enter your name">
+    <button onclick="displayName()">Submit</button>
+    <p id="result"></p>
+
+    <script>
+        function displayName() {
+            const name = document.getElementById("username").value;
+            document.getElementById("result").innerHTML = "Hello, " + name;
+        }
+    </script>
+</body>
+</html>
+
+
+
+47. SIMPLE FORM VALIDATION
+
+
+<!DOCTYPE html>
+<html>
+<body>
+    <form onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        function validateForm() {
+            const name = document.getElementById("name").value.trim();
+
+            if (name === "") {
+                document.getElementById("message").innerHTML = "Name is required.";
+                return false;
+            }
+
+            document.getElementById("message").innerHTML = "Form submitted successfully.";
+            return false;
+        }
+    </script>
+</body>
+</html>
+
+
+
+48. SIMPLE STUDENT RESULT CHECKER
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result Checker</title>
+</head>
+<body>
+    <h2>Student Result Checker</h2>
+
+    <label for="marks">Enter marks:</label>
+    <input type="number" id="marks" min="0" max="100">
+    <button onclick="checkResult()">Check Result</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkResult() {
+            const marks = Number(document.getElementById("marks").value);
+            const result = document.getElementById("result");
+
+            if (document.getElementById("marks").value === "" || marks < 0 || marks > 100) {
+                result.innerHTML = "Please enter marks between 0 and 100.";
+            } else if (marks >= 40) {
+                result.innerHTML = "Pass";
+            } else {
+                result.innerHTML = "Fail";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+49. STUDENT GRADE CALCULATOR
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Grade Calculator</title>
+</head>
+<body>
+    <h2>Student Grade Calculator</h2>
+
+    <label for="marks">Enter marks (0–100):</label>
+    <input type="number" id="marks" min="0" max="100">
+    <button onclick="calculateGrade()">Calculate Grade</button>
+
+    <p id="grade"></p>
+
+    <script>
+        function calculateGrade() {
+            const input = document.getElementById("marks").value;
+            const marks = Number(input);
+            const grade = document.getElementById("grade");
+
+            if (input === "" || marks < 0 || marks > 100) {
+                grade.innerHTML = "Please enter valid marks between 0 and 100.";
+            } else if (marks >= 90) {
+                grade.innerHTML = "Grade A+";
+            } else if (marks >= 80) {
+                grade.innerHTML = "Grade A";
+            } else if (marks >= 70) {
+                grade.innerHTML = "Grade B";
+            } else if (marks >= 60) {
+                grade.innerHTML = "Grade C";
+            } else if (marks >= 40) {
+                grade.innerHTML = "Grade D";
+            } else {
+                grade.innerHTML = "Fail";
+            }
+        }
+    </script>
+</body>
+</html>
+
